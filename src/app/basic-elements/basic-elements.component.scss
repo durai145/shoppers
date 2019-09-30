@@ -1,0 +1,89 @@
+@function invert($color, $amount: 100%) {
+    $inverse: change-color($color, $hue: hue($color) + 180);
+    @return mix($inverse, $color, $amount);
+  }
+  
+  $primary-color: #036;
+  .header {
+    background-color: invert($primary-color, 80%);
+  }
+
+  .error {
+    border: 1px #f00;
+    background-color: #fdd;
+  
+    &--serious {
+      @extend .error;
+      border-width: 3px;
+    }
+  }
+
+
+  $sizes: 40px, 50px, 80px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+
+
+$theme-colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);
+
+.alert {
+  // Instead of $theme-color-#{warning}
+  background-color: map-get($theme-colors, "warning");
+}
+
+$fontSizes : (
+    "F1" : 10px,
+    "F2" : 15px,
+    "F3" : 20px,
+    "F4" : 25px,
+    "F5" : 30px,
+    "F6" : 50px
+);
+
+$backGroundColors : (
+    "B1" : #101010,
+    "B2" : #202020,
+    "B3" : #404040,
+    "B4" : #505050,
+    "B5" : #707070,
+    "B6" : #AAAAAA
+);
+
+$fontColors : (
+    "C1" : rgb(151, 119, 204),
+    "C2" : rgb(53, 148, 72),
+    "C3" : rgb(158, 105, 105),
+    "C4" : #a155a8,
+    "C5" : #8c5a5a,
+    "C6" : rgb(160, 33, 33)
+);
+
+@each $colorKey, $colorValue in $fontColors {
+
+    @each $bgKey, $bgValue in $backGroundColors {
+
+        @each $fontKey, $fontValue in $fontSizes {
+            @debug($fontKey);
+            @debug($fontValue);
+            @debug(#{$colorKey}#{$bgKey}#{$fontKey});
+            @debug(#{$colorValue} +"|"+ #{$bgValue} + "|" + #{$fontValue});
+            //@debug(map-get($fontSizes, $fontSize));
+            .#{$colorKey}#{$bgKey}#{$fontKey} {
+                background: $bgValue ;
+                color : $colorValue;
+                font-size: $fontValue;
+            }
+        }
+    }
+}
