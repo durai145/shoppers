@@ -12,6 +12,7 @@ import { InputTextElementComponent } from './element/input-text-element/input-te
 import { InputListElementComponent } from './element/input-list-element/input-list-element.component';
 import { InputTextPasswordElementComponent } from './element/input-text-password-element/input-text-password-element.component';
 import { InputAmountElementComponent } from './element/input-amount-element/input-amount-element.component';
+import { InputButtonElementComponent } from './element/input-button-element/input-button-element.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InputAmountElementComponent } from './element/input-amount-element/inpu
     InputTextElementComponent,
     InputListElementComponent,
     InputTextPasswordElementComponent,
-    InputAmountElementComponent
+    InputAmountElementComponent,
+    InputButtonElementComponent
   ],
   imports: [
     BrowserModule,

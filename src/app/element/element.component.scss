@@ -48,25 +48,28 @@ $fontSizes : (
     "F3" : 20px,
     "F4" : 25px,
     "F5" : 30px,
-    "F6" : 50px
+    "F6" : 35px,
+    "F7" : 50px
 );
 
 $backGroundColors : (
-    "B1" : #101010,
+    "B1" : #2c618d,
     "B2" : #202020,
-    "B3" : #404040,
-    "B4" : #505050,
-    "B5" : #707070,
-    "B6" : #AAAAAA
+    "B3" : #000000,
+    "B4" : #4d518d,
+    "B5" : #29794c,
+    "B6" : #AAAAAA,
+    "B7" : #dadd71
 );
 
 $fontColors : (
-    "C1" : rgb(151, 119, 204),
-    "C2" : rgb(53, 148, 72),
-    "C3" : rgb(158, 105, 105),
-    "C4" : #c3b2c4,
+    "C1" : #af68da,
+    "C2" : #dddf9f,
+    "C3" : #ffffff,
+    "C4" : #000000,
     "C5" : #ebb5b5,
-    "C6" : rgb(160, 33, 33)
+    "C6" : rgb(160, 33, 33),
+    "C7" : #bed8d7
 );
 
 @each $colorKey, $colorValue in $fontColors {
@@ -83,12 +86,12 @@ $fontColors : (
                 background: $bgValue ;
                 color : $colorValue;
                 font-size: $fontValue;
-                padding: 2px;
+                padding: 5px;
                 margin: 15px;
                 -moz-box-shadow: 10px 0px 10px 0px #888888;
                 -webkit-box-shadow: 8px 0px 10px 0px  #888888;
                 box-shadow: 10px 0px 10px 0px  #888888;
-                opacity: 75%;
+                opacity: 0.85;
             }
         }
     }
