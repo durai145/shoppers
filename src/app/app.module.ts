@@ -13,6 +13,9 @@ import { InputListElementComponent } from './element/input-list-element/input-li
 import { InputTextPasswordElementComponent } from './element/input-text-password-element/input-text-password-element.component';
 import { InputAmountElementComponent } from './element/input-amount-element/input-amount-element.component';
 import { InputButtonElementComponent } from './element/input-button-element/input-button-element.component';
+import { MosaicComponent } from './element/mosaic/mosaic.component';
+import { GridComponent } from './element/grid/grid.component';
+import { MenuListComponent } from './element/menu-list/menu-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { InputButtonElementComponent } from './element/input-button-element/inpu
     InputListElementComponent,
     InputTextPasswordElementComponent,
     InputAmountElementComponent,
-    InputButtonElementComponent
+    InputButtonElementComponent,
+    MosaicComponent,
+    GridComponent,
+    MenuListComponent
   ],
   imports: [
     BrowserModule,

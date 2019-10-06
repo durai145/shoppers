@@ -45,7 +45,7 @@ $theme-colors: (
 $fontSizes : (
     "F1" : 10px,
     "F2" : 15px,
-    "F3" : 20px,
+    "F3" : 18px,
     "F4" : 25px,
     "F5" : 30px,
     "F6" : 35px,
@@ -53,9 +53,9 @@ $fontSizes : (
 );
 
 $backGroundColors : (
-    "B1" : #2c618d,
-    "B2" : #202020,
-    "B3" : #000000,
+    "B1" : #FFFFFF,
+    "B2" : rgb(227, 38, 25),
+    "B3" : rgb(77, 77, 77),
     "B4" : #4d518d,
     "B5" : #29794c,
     "B6" : #AAAAAA,
@@ -63,8 +63,8 @@ $backGroundColors : (
 );
 
 $fontColors : (
-    "C1" : #af68da,
-    "C2" : #dddf9f,
+    "C1" : #000000,
+    "C2" : #ffffff,
     "C3" : #ffffff,
     "C4" : #000000,
     "C5" : #ebb5b5,
