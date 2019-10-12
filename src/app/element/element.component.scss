@@ -1,3 +1,5 @@
+
+
 @function invert($color, $amount: 100%) {
     $inverse: change-color($color, $hue: hue($color) + 180);
     @return mix($inverse, $color, $amount);
@@ -42,6 +44,41 @@ $theme-colors: (
   background-color: map-get($theme-colors, "warning");
 }
 
+
+@font-face {
+  font-family: 'Lato';
+  src: url("~/assets/font/Lato-Black.ttf") format("truefont"),
+  url("~/assets/font/Lato-BlackItalic.ttf") format("truefont");
+
+}
+
+@font-face {
+  font-family: 'Sofia';
+  src: url("~/assets/font/Sofia-Regular.otf") format("opentype");
+
+}
+
+body {
+  font-family: 'Lato', 'Lato-Black';
+}
+
+
+$ussHeight : (
+  "W1" : 9vh,
+  "W2" : 18vh,
+  "W3" : 27vh,
+  "W4" : 36vh,
+  "W5" : 45vh,
+  "W6" : 54vh,
+  "W7" : 63vh,
+  "W8" : 72vh,
+  "W9" : 81vh,
+  "W10" : 90vh,
+  "W11" : 99vh
+);
+
+
+
 $fontSizes : (
     "F1" : 10px,
     "F2" : 15px,
@@ -62,6 +99,19 @@ $backGroundColors : (
     "B7" : #dadd71
 );
 
+
+$backGroundColorsHover : (
+    "B1" : rgb(223, 223, 223),
+    "B2" : rgb(237, 80, 69),
+    "B3" : rgb(46, 46, 46),
+    "B4" : #323787,
+    "B5" : #13743d,
+    "B6" : rgb(79, 78, 78),
+    "B7" : #bbbd74
+);
+
+
+
 $fontColors : (
     "C1" : #000000,
     "C2" : #ffffff,
@@ -70,6 +120,17 @@ $fontColors : (
     "C5" : #ebb5b5,
     "C6" : #FF8000,
     "C7" : #bed8d7
+);
+
+
+$fontColorsHover : (
+    "C1" : #360f7b,
+    "C2" : #eed0d0,
+    "C3" : #d5cccc,
+    "C4" : #3a2626,
+    "C5" : #946337,
+    "C6" : #FF8000,
+    "C7" : #1b4341
 );
 
 @each $colorKey, $colorValue in $fontColors {
@@ -88,11 +149,55 @@ $fontColors : (
                 font-size: $fontValue;
                 padding: 5px;
                 margin: 15px;
-                -moz-box-shadow: 10px 0px 10px 0px #888888;
-                -webkit-box-shadow: 8px 0px 10px 0px  #888888;
-                box-shadow: 10px 0px 10px 0px  #888888;
                 opacity: 0.85;
+                font-family: "Work Sans", sans-serif;
             }
+
+            .#{$colorKey}#{$bgKey}#{$fontKey}:hover {
+              background: map-get($backGroundColorsHover, $bgKey);
+              color : map-get($fontColorsHover, $colorKey);
+              font-size: $fontValue;
+              padding: 5px;
+              margin: 15px;
+              opacity: 0.85;
+              font-family: "Work Sans", sans-serif;
+          }
+
+            .#{$colorKey}#{$bgKey}#{$fontKey}Box {
+              background: $bgValue ;
+              color : $colorValue;
+              font-size: $fontValue;
+              padding: 5px;
+              margin: 15px;
+              border: rgb(77, 77, 77);
+              border-width: 1px 1px;
+              opacity: 0.85;
+              font-family: "Work Sans", sans-serif;
+              
+              -webkit-box-shadow: 1px -3px 9px -5px rgba(0,0,0,0.51);
+              -moz-box-shadow: 1px -3px 9px -5px rgba(0,0,0,0.51);
+              box-shadow: 1px -3px 9px -5px rgba(0,0,0,0.51);
+          }
+
+          .#{$colorKey}#{$bgKey}#{$fontKey}BoxButtom {
+            background: $bgValue ;
+            color : $colorValue;
+            font-size: $fontValue;
+            padding: 5px;
+            margin: -15px 15px 15px 15px;
+            border: rgb(77, 77, 77);
+            border-width: 1px 1px;
+            opacity: 0.85;
+            font-family: "Work Sans", sans-serif;
+            -webkit-box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.75);
+            box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.75);
+        }
         }
     }
+}
+@each $heightKey, $heightValue in $ussHeight  {
+    .#{$heightKey} {
+        height: $heightValue;
+    };
 }

@@ -16,6 +16,9 @@ import { InputButtonElementComponent } from './element/input-button-element/inpu
 import { MosaicComponent } from './element/mosaic/mosaic.component';
 import { GridComponent } from './element/grid/grid.component';
 import { MenuListComponent } from './element/menu-list/menu-list.component';
+import { SlideShowComponent } from './element/slide-show/slide-show.component';
+import { SearchTextComponent } from './element/search-text/search-text.component';
+import { SearchBoxComponent } from './element/search-box/search-box.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { MenuListComponent } from './element/menu-list/menu-list.component';
     InputButtonElementComponent,
     MosaicComponent,
     GridComponent,
-    MenuListComponent
+    MenuListComponent,
+    SlideShowComponent,
+    SearchTextComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
