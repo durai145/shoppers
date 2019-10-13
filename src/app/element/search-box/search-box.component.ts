@@ -1,3 +1,4 @@
+import { ElementComponent } from './../element.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.scss']
 })
-export class SearchBoxComponent implements OnInit {
+export class SearchBoxComponent extends ElementComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    super();
+   }
 
   ngOnInit() {
   }

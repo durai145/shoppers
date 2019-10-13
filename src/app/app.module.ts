@@ -19,7 +19,7 @@ import { MenuListComponent } from './element/menu-list/menu-list.component';
 import { SlideShowComponent } from './element/slide-show/slide-show.component';
 import { SearchTextComponent } from './element/search-text/search-text.component';
 import { SearchBoxComponent } from './element/search-box/search-box.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,8 @@ import { SearchBoxComponent } from './element/search-box/search-box.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
