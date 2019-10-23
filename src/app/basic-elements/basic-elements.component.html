@@ -17,8 +17,11 @@ Menu Bar
 Menu:
 <app-element B="B3" F="F4" C="C2"> </app-element>
 
-LoginPanel(C1B1F1):
-<app-menu-panel  B="B1" F="F3" C="C1" body="Test"></app-menu-panel>
+LoginPanel(C1B1F1):"{{menuItem1}}"
+{{ menuItemsJson| json}}
+<!--app-menu-panel  B="B1" F="F3" C="C1" brandName="INDIAN SPICES"  inputJson='[{"name": "test1", "link": "link1"}, {"name": "test2", "link": "link1"}]' ></app-menu-panel-->
+<app-menu-panel  B="B1" F="F3" C="C1" brandName="INDIAN SPICES"  inputJson={{menuItemsJson}} ></app-menu-panel>
+
 Input:
 <app-input-text-element  B="B1" F="F1" C="C1" modelName="username" ></app-input-text-element>
 
@@ -28,3 +31,4 @@ Button(C2B2F3):
 SlideShow:
 
 <app-slide-show></app-slide-show>
+

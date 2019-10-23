@@ -20,6 +20,8 @@ import { SlideShowComponent } from './element/slide-show/slide-show.component';
 import { SearchTextComponent } from './element/search-text/search-text.component';
 import { SearchBoxComponent } from './element/search-box/search-box.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MenuListComponent,
     SlideShowComponent,
     SearchTextComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LandingPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

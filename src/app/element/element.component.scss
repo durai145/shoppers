@@ -63,18 +63,31 @@ body {
 }
 
 
-$ussHeight : ("W1" : 9vh,
-  "W2" : 18vh,
-  "W3" : 27vh,
-  "W4" : 36vh,
-  "W5" : 45vh,
+$ussHeight : ("H1" : 9vh,
+  "H2" : 18vh,
+  "H3" : 27vh,
+  "H4" : 36vh,
+  "H5" : 45vh,
+  "H6" : 54vh,
+  "H7" : 63vh,
+  "H8" : 72vh,
+  "H9" : 81vh,
+  "H10" : 90vh,
+  "H11" : 99vh);
+
+
+$ussWidth : ("W1" : 8.3vw,
+  "W2" : 16.6vw,
+  "W3" : 24.9vw,
+  "W4" : 33.2vw,
+  "W5" : 41.5vw,
   "W6" : 54vh,
   "W7" : 63vh,
   "W8" : 72vh,
   "W9" : 81vh,
   "W10" : 90vh,
-  "W11" : 99vh);
-
+  "w11" : 99vh,
+  "w12" : 99vh);
 
 
 $fontSizes : ("F1" : 10px,
@@ -93,7 +106,7 @@ $backGroundColors : ("B1" : #FFFFFF,
   "B6" : #AAAAAA,
   "B7" : #dadd71);
 
-  $borderForBackGroundColors : ("B1" :#d9d9d9,
+$borderForBackGroundColors : ("B1" :#d9d9d9,
   "B2" : #d9d9d9,
   "B3" : rgb(210, 204, 204),
   "B4" : #4d518d,
@@ -127,6 +140,19 @@ $fontColorsHover : ("C1" : #360f7b,
   "C5" : #946337,
   "C6" : #FF8000,
   "C7" : #1b4341);
+
+.box {
+
+  -webkit-box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
+}
+
+.NoMargin {
+  -webkit-box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
+}
 
 @each $colorKey,
 $colorValue in $fontColors {
@@ -181,8 +207,8 @@ $colorValue in $fontColors {
         border-bottom-width: 0.5px;
         border-left-width: 0px;
         border-color: map-get($borderForBackGroundColors, $bgKey)
-      
       }
+
 
       .#{$colorKey}#{$bgKey}#{$fontKey}RightNoMargin {
         background: $bgValue;
@@ -191,9 +217,7 @@ $colorValue in $fontColors {
         font-family: "Work Sans", sans-serif;
         padding: 0px 0px 0px 15px;
         margin: 15px 0px 15px 15px;
-        -webkit-box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.75);
+        @extend .NoMargin;
         outline: none;
         border-top-width: 0.5px;
         border-right-width: 0px;
@@ -211,6 +235,7 @@ $colorValue in $fontColors {
         outline: none;
       }
 
+
       .#{$colorKey}#{$bgKey}#{$fontKey}Box {
         background: $bgValue;
         color: $colorValue;
@@ -222,10 +247,8 @@ $colorValue in $fontColors {
         opacity: 0.85;
         font-family: "Work Sans", sans-serif;
 
-        -webkit-box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
-        -moz-box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
-        box-shadow: 1px -3px 9px -5px rgba(0, 0, 0, 0.51);
         outline: none;
+        @extend .box;
       }
 
       .#{$colorKey}#{$bgKey}#{$fontKey}BoxButtom {
@@ -252,6 +275,4 @@ $heightValue in $ussHeight {
   .#{$heightKey} {
     height: $heightValue;
   }
-
-  ;
 }
