@@ -1,5 +1,5 @@
 import { ElementComponent } from './../element.component';
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { Link } from '../../link';
 import { UtilsServiceService } from '../../utils-service.service';
 
@@ -14,7 +14,7 @@ export class MenuPanelComponent extends ElementComponent implements OnInit, Afte
   @Input() inputJson: string;
   @Input() brandName: string;
   menuItems: Array<Link>;
-  constructor() {
+  constructor(private cdr: ChangeDetectorRef) {
     super();
    }
 
@@ -22,5 +22,8 @@ export class MenuPanelComponent extends ElementComponent implements OnInit, Afte
   }
   ngAfterViewInit(): void {
     this.menuItems = UtilsServiceService.jsonParse(this.inputJson);
+    this.cdr.detectChanges();
   }
+
+
 }
