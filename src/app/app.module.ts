@@ -22,6 +22,9 @@ import { SearchBoxComponent } from './element/search-box/search-box.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModelComponent } from './model/model.component';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,12 +45,14 @@ import { FooterComponent } from './footer/footer.component';
     SearchTextComponent,
     SearchBoxComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
