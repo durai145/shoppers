@@ -25,6 +25,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ModelComponent } from './model/model.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProductTilesComponent } from './element/product-tiles/product-tiles.component';
+import { ProductTileComponent } from './element/product-tile/product-tile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SearchBoxComponent,
     LandingPageComponent,
     FooterComponent,
-    ModelComponent
+    ModelComponent,
+    ProductTilesComponent,
+    ProductTileComponent
   ],
   imports: [
     BrowserModule,
