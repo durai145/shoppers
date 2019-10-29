@@ -1,3 +1,4 @@
+import { ElementComponent } from './../element.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './product-tiles.component.html',
   styleUrls: ['./product-tiles.component.scss']
 })
-export class ProductTilesComponent implements OnInit {
+export class ProductTilesComponent extends ElementComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    super();
+   }
 
   ngOnInit() {
   }

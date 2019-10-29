@@ -1,5 +1,5 @@
 import { ElementComponent } from './../element.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-tile',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-tile.component.scss']
 })
 export class ProductTileComponent extends ElementComponent implements OnInit {
-
+  @Input() imageId: string;
   constructor() {
     super();
   }
