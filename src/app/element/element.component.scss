@@ -165,10 +165,10 @@ $colorValue in $fontColors {
 
     @each $fontKey,
     $fontValue in $fontSizes {
-      @debug($fontKey);
-      @debug($fontValue);
-      @debug(#{$colorKey}#{$bgKey}#{$fontKey});
-      @debug(#{$colorValue} +"|"+ #{$bgValue} + "|"+ #{$fontValue});
+      // @debug($fontKey);
+      // @debug($fontValue);
+      // @debug(#{$colorKey}#{$bgKey}#{$fontKey});
+      // @debug(#{$colorValue} +"|"+ #{$bgValue} + "|"+ #{$fontValue});
 
       //@debug(map-get($fontSizes, $fontSize));
       .#{$colorKey}#{$bgKey}#{$fontKey} {
