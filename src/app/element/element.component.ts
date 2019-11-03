@@ -17,15 +17,15 @@ export class ElementComponent implements OnInit {
   @Input() C: string;
 
   constructor() {
-    console.log(this.F);
-    console.log(this.B);
-    console.log(this.C);
+  //  console.log(this.F);
+  //  console.log(this.B);
+  // console.log(this.C);
   }
 
   ngOnInit() {
-    console.log(this.F);
-    console.log(this.B);
-    console.log(this.C);
+   // console.log(this.F);
+   // console.log(this.B);
+   // console.log(this.C);
   }
 
   getClassName() {
