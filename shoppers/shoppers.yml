@@ -1,0 +1,45 @@
+---
+ - name: install pre-install for app server
+   hosts: web
+   remote_user: root
+   become_method: sudo
+   become_user: root
+   vars:
+     http_port: 80 
+     http_clients: 200 
+       
+   tasks:
+   - name: Update repositories cache and install "make" package
+     apt:
+       name: make
+       update_cache: yes
+   - name: Update repositories cache and install "nodejs" package
+     apt:
+       name: nodejs
+       update_cache: yes
+   - name: Update repositories cache and install "npm" package
+     apt:
+       name: npm
+       update_cache: yes
+   - name: install angular/cli
+     become: True
+     command: npm install @angular/cli -g
+
+   - name: Check that the /root/shoppers/  exists
+     stat:
+       path: /root/shoppers/
+     register: stat_result
+
+   - name: Delete the shoppers folder before clone 
+     file:
+       path: /root/shoppers/
+       state: absent
+     when: stat_result.stat.exists == True
+
+   - name: git checkout "Haraka"  
+     become: True
+     command: git clone https://github.com/durai145/shoppers.git  /root/shoppers/
+
+   - name:  install shoppers 
+     become: True
+     command: npm install /root/shoppers/
