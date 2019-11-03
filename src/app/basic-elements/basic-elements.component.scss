@@ -69,21 +69,21 @@ $fontColors : (
     "C6" : rgb(160, 33, 33)
 );
 
-@each $colorKey, $colorValue in $fontColors {
+// @each $colorKey, $colorValue in $fontColors {
 
-    @each $bgKey, $bgValue in $backGroundColors {
+//     @each $bgKey, $bgValue in $backGroundColors {
 
-        @each $fontKey, $fontValue in $fontSizes {
-            @debug($fontKey);
-            @debug($fontValue);
-            @debug(#{$colorKey}#{$bgKey}#{$fontKey});
-            @debug(#{$colorValue} +"|"+ #{$bgValue} + "|" + #{$fontValue});
-            //@debug(map-get($fontSizes, $fontSize));
-            .#{$colorKey}#{$bgKey}#{$fontKey} {
-                background: $bgValue ;
-                color : $colorValue;
-                font-size: $fontValue;
-            }
-        }
-    }
-}
+//         @each $fontKey, $fontValue in $fontSizes {
+//             @debug($fontKey);
+//             @debug($fontValue);
+//             @debug(#{$colorKey}#{$bgKey}#{$fontKey});
+//             @debug(#{$colorValue} +"|"+ #{$bgValue} + "|" + #{$fontValue});
+//             //@debug(map-get($fontSizes, $fontSize));
+//             .#{$colorKey}#{$bgKey}#{$fontKey} {
+//                 background: $bgValue ;
+//                 color : $colorValue;
+//                 font-size: $fontValue;
+//             }
+//         }
+//     }
+// }
