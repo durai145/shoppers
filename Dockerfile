@@ -15,12 +15,13 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json /app/package.json
-RUN npm install
-RUN npm install -g @angular/cli@7.3.9
 
 # add app
+COPY package.json /app/package.json
+RUN npm install -g npm
+RUN npm install -g @angular/cli
+RUN npm install
 COPY . /app
-
+EXPOSE 4200
 # start app
-CMD ng serve --disableHostCheck --port 5000
+CMD ["ng", "serve"]
