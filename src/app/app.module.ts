@@ -27,6 +27,9 @@ import { ModelComponent } from './model/model.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProductTilesComponent } from './element/product-tiles/product-tiles.component';
 import { ProductTileComponent } from './element/product-tile/product-tile.component';
+import { MoasicLargeComponent } from './element/mosaic/moasic-large/moasic-large.component';
+import { MoasicSmallComponent } from './element/mosaic/moasic-small/moasic-small.component';
+import { MoasicMediumComponent } from './element/mosaic/moasic-medium/moasic-medium.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +53,10 @@ import { ProductTileComponent } from './element/product-tile/product-tile.compon
     FooterComponent,
     ModelComponent,
     ProductTilesComponent,
-    ProductTileComponent
+    ProductTileComponent,
+    MoasicLargeComponent,
+    MoasicSmallComponent,
+    MoasicMediumComponent
   ],
   imports: [
     BrowserModule,
