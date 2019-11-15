@@ -1,0 +1,13 @@
+@import "../../mosaic/mosaic.component.scss";
+
+.moasic-button {
+    position: relative;
+    transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    font-size: 16px;
+    padding: 8px 8px;
+    border: 1px solid #040504;
+    cursor: pointer;
+    border-radius: 1px;
+    outline: none;
+  }

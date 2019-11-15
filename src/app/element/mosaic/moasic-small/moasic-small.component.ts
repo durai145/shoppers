@@ -1,5 +1,5 @@
 import { MosaicComponent } from './../mosaic.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-moasic-small',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoasicSmallComponent extends MosaicComponent  implements OnInit {
 
-  imageLink: string;
-  title: string;
+  @Input() title: string;
+  @Input() subTitle: string;
+  @Input() imageId1: string;
+  @Input() imageId2: string;
+  @Input() imageId3: string;
+
   constructor() {
     super();
    }

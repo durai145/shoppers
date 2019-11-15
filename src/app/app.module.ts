@@ -30,6 +30,8 @@ import { ProductTileComponent } from './element/product-tile/product-tile.compon
 import { MoasicLargeComponent } from './element/mosaic/moasic-large/moasic-large.component';
 import { MoasicSmallComponent } from './element/mosaic/moasic-small/moasic-small.component';
 import { MoasicMediumComponent } from './element/mosaic/moasic-medium/moasic-medium.component';
+import { TitleComponent } from './element/mosaic/title/title.component';
+import { SubTitleComponent } from './element/mosaic/sub-title/sub-title.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,9 @@ import { MoasicMediumComponent } from './element/mosaic/moasic-medium/moasic-med
     ProductTileComponent,
     MoasicLargeComponent,
     MoasicSmallComponent,
-    MoasicMediumComponent
+    MoasicMediumComponent,
+    TitleComponent,
+    SubTitleComponent
   ],
   imports: [
     BrowserModule,

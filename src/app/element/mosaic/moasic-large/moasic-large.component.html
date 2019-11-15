@@ -1,1 +1,32 @@
-<p>moasic-large works!</p>
+<div class="container moasic-padding box">
+  <div class="row moasic-padding">
+    <div class="col-sm moasic-padding">
+      <app-title B="{{B}}" F="{{F}}" C="{{C}}" value="{{title}}"></app-title>
+      <app-title B="{{B}}" F="F2" C="C2" value="{{subTitle}}"></app-title>
+      <button class="btn moasic-button">{{link1}}
+        <fa-icon [icon]="faArrowRight"></fa-icon>
+      </button>
+    </div>
+    <div class="col-sm moasic-padding">
+      <div class="container moasic-padding">
+        <div class="row moasic-padding">
+          <div class="col-sm  moasic-padding align-middle">
+            <div class="align-middle">
+              <img src="{{imageId1}}" alt="..." class="img-thumbnail">
+            </div>
+          </div>
+          <div class="col-sm  moasic-padding align-middle">
+            <div class="align-middle">
+              <img src="{{imageId2}}" alt="..." class="img-thumbnail">
+            </div>
+          </div>
+          <div class="col-sm  moasic-padding align-middle">
+            <div class="align-middle">
+              <img src="{{imageId3}}" alt="..." class="img-thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
