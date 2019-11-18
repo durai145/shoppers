@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BasicElementsComponent } from './basic-elements/basic-elements.component';
@@ -23,6 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModelComponent } from './model/model.component';
+import { FormsModule } from '@angular/forms';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProductTilesComponent } from './element/product-tiles/product-tiles.component';
@@ -32,6 +33,8 @@ import { MoasicSmallComponent } from './element/mosaic/moasic-small/moasic-small
 import { MoasicMediumComponent } from './element/mosaic/moasic-medium/moasic-medium.component';
 import { TitleComponent } from './element/mosaic/title/title.component';
 import { SubTitleComponent } from './element/mosaic/sub-title/sub-title.component';
+import { ListViewComponent } from './list-view/list-view.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,13 +63,17 @@ import { SubTitleComponent } from './element/mosaic/sub-title/sub-title.componen
     MoasicSmallComponent,
     MoasicMediumComponent,
     TitleComponent,
-    SubTitleComponent
+    SubTitleComponent,
+    ListViewComponent,
+    UploadImageComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

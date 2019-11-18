@@ -1,0 +1,18 @@
+{
+    "products" : [
+        {
+       "productId": "HGSLIP00001",
+       "imageId" : "~/asset/product/HGSLIP00001.jpg",
+       "slideShowImageIds" : [ 
+                           "~/asset/product/HGSLIP00001_001.jpg",
+                           "~/asset/product/HGSLIP00001_002.jpg"
+                           ],
+       "currentPrice": 4.99,
+       "discount" : 0.99,
+       "shortDesc" : "tomoto",
+       "detailDesc" : "tomoto on wine from fresh market",
+       "notes" : "",
+       "deliveryDuration" : "3 days"
+
+       }]
+}

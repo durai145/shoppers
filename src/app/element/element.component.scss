@@ -124,6 +124,12 @@ $backGroundColorsHover : ("B1" : rgb(223, 223, 223),
   "B5" : #13743d,
   "B6" : rgb(79, 78, 78),
   "B7" : #bbbd74);
+
+.border {
+  padding: -1px -15px -2px -15px;
+  border: 1px solid #040504;
+}
+
 .noborder {
   border: none;
 }

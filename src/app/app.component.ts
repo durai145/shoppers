@@ -1,4 +1,7 @@
+
+import { CardServiceService } from './card-service.service';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shoppers';
+  cardService: CardServiceService;
+  constructor(crdServiceService: CardServiceService) {
+    this.cardService = crdServiceService;
+  }
+  getProductList() {
+    return JSON.stringify(this.cardService.getShippingPrices());
+  }
 }
