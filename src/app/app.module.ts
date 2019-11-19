@@ -35,6 +35,8 @@ import { TitleComponent } from './element/mosaic/title/title.component';
 import { SubTitleComponent } from './element/mosaic/sub-title/sub-title.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { ProductStandardViewComponent } from './product-standard-view/product-standard-view.component';
+import { ProductFullViewComponent } from './product-full-view/product-full-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,9 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     TitleComponent,
     SubTitleComponent,
     ListViewComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    ProductStandardViewComponent,
+    ProductFullViewComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,0 +1,21 @@
+<app-product-tile imageId="{{item.imageId}}"></app-product-tile>
+<div class="container moasic-padding box">
+  <div class="row moasic-padding">
+    <div class="col-3 moasic-padding">
+      <app-title B="B1" F="F3" C="C1" value="${{item.currentPrice}}"></app-title>
+    </div>
+    <div class="col-9 moasic-padding">
+      <app-title B="B1" F="F2" C="C2" value="After ${{item.discount}} OFF"></app-title>
+    </div>
+  </div>
+  <div class="row moasic-padding">
+    <div class="col-12 moasic-padding">
+      <app-title B="B1" F="F2" C="C2" value="weight: {{item.wieght}} {{item.weightScale}}"></app-title>
+    </div>
+  </div>
+  <div class="row moasic-padding">
+    <div class="col-12 moasic-padding">
+      <app-title B="B1" F="F2" C="C2" value="{{item.notes}}"></app-title>
+    </div>
+  </div>
+</div>
