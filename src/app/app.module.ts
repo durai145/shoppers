@@ -37,6 +37,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { ProductStandardViewComponent } from './product-standard-view/product-standard-view.component';
 import { ProductFullViewComponent } from './product-full-view/product-full-view.component';
+import { RatingComponent } from './element/rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { ProductFullViewComponent } from './product-full-view/product-full-view.
     ListViewComponent,
     UploadImageComponent,
     ProductStandardViewComponent,
-    ProductFullViewComponent
+    ProductFullViewComponent,
+    RatingComponent
   ],
   imports: [
     HttpClientModule,

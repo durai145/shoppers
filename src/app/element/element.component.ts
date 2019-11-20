@@ -1,6 +1,6 @@
 
 import { Component, OnInit, Input } from '@angular/core';
-import { faCoffee, faSearch, faShoppingCart, IconDefinition , faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faSearch, faShoppingCart, IconDefinition , faArrowRight, faCartPlus} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-element',
@@ -12,6 +12,7 @@ export class ElementComponent implements OnInit {
   faSearch: IconDefinition = faSearch;
   faShoppingCart: IconDefinition = faShoppingCart;
   faArrowRight: IconDefinition = faArrowRight;
+  faCartPlus: IconDefinition = faCartPlus;
 
   @Input() B: string;
   @Input() F: string;
