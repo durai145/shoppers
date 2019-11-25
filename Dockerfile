@@ -21,7 +21,11 @@ COPY package.json /app/package.json
 RUN npm install -g npm
 RUN npm install -g @angular/cli
 RUN npm install
+RUN npm i -g browserslist caniuse-lite 
+RUN npm update -y
+RUN apt-get install net-tools
 COPY . /app
 EXPOSE 4200
 # start app
-CMD ["ng" , "serve", "--disableHostCheck=false"]
+#ENTRYPOINT ["ng"]
+CMD ["ng" , "serve", "--disableHostCheck=false", "--port=4200"]
