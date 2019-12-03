@@ -38,6 +38,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 import { ProductStandardViewComponent } from './product-standard-view/product-standard-view.component';
 import { ProductFullViewComponent } from './product-full-view/product-full-view.component';
 import { RatingComponent } from './element/rating/rating.component';
+import { MapBasicComponent } from './element/map-basic/map-basic.component';
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +73,8 @@ import { RatingComponent } from './element/rating/rating.component';
     UploadImageComponent,
     ProductStandardViewComponent,
     ProductFullViewComponent,
-    RatingComponent
+    RatingComponent,
+    MapBasicComponent
   ],
   imports: [
     HttpClientModule,
@@ -79,7 +82,11 @@ import { RatingComponent } from './element/rating/rating.component';
     AppRoutingModule,
     FontAwesomeModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAEvhYgeKLzYv7186JkGQSlOURaRkUzKZE',
+      libraries: ['places']
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
