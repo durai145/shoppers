@@ -40,6 +40,10 @@ import { ProductFullViewComponent } from './product-full-view/product-full-view.
 import { RatingComponent } from './element/rating/rating.component';
 import { MapBasicComponent } from './element/map-basic/map-basic.component';
 import { AgmCoreModule } from '@agm/core';
+import { MailComponent } from './mail/mail.component';
+import { MailRecordComponent } from './mail/mail-record/mail-record.component';
+import { DetailsComponent } from './mail/mail/details/details.component';
+import { MailDetailsComponent } from './mail/mail-details/mail-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +78,11 @@ import { AgmCoreModule } from '@agm/core';
     ProductStandardViewComponent,
     ProductFullViewComponent,
     RatingComponent,
-    MapBasicComponent
+    MapBasicComponent,
+    MailComponent,
+    MailRecordComponent,
+    DetailsComponent,
+    MailDetailsComponent
   ],
   imports: [
     HttpClientModule,
