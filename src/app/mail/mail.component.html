@@ -1,4 +1,4 @@
-<p>mail works!</p>
+
 <div class="row tableRow ">
   <div id="td" class="col-md-3 col-sm-2 col-xs-2">
     <div>
@@ -127,100 +127,21 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            <label class="clabel"> Duraimurugan Govindaraj </label>
-          </div>
-          <div class="col-md-6 col-sm-2 col-xs-2">
-
-            <b> Test Mail</b> : <i> This is test</i>
-
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            2 min
-          </div>
-        </div>
-        <div class="row tableRow">
-          <div class="clearfix visible-xs"></div>
-          <div class="clearfix visible-sm"></div>
-
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            <div class="row tableRow">
-              <div class="col-md-3 col-sm-2 col-xs-2">
-                <input type="checkbox">
-              </div>
-              <div class="col-md-3 col-sm-2 col-xs-2">
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </div>
-              <div class="col-md-3 col-sm-2 col-xs-2">
-                <i class="fa fa-exclamation" aria-hidden="true"></i>
-              </div>
-
-              <div class="col-md-3 col-sm-2 col-xs-2">
-                <i class="fa fa-paperclip" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            <label class="clabel"> Duraimurugan Govindaraj </label>
-          </div>
-          <div class="col-md-6 col-sm-2 col-xs-2">
-
-            <b> Test Mail</b> : <i> This is test</i>
-
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            2 min
-          </div>
+        
         </div>
 
-        <app-mail-record></app-mail-record>
+        <app-mail-record [mail]="mail" *ngFor="let mail of mails"  (click)="onSelect(mail)"></app-mail-record>
     
-        <div class="row tableRow">
-            <div class="clearfix visible-xs"></div>
-            <div class="clearfix visible-sm"></div>
-  
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              <div class="row tableRow">
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                  <input type="checkbox">
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                  <i class="fa fa-exclamation" aria-hidden="true"></i>
-                </div>
-  
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                  <i class="fa fa-paperclip" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              <label class="clabel"> Duraimurugan Govindaraj </label>
-            </div>
-            <div class="col-md-6 col-sm-2 col-xs-2">
-  
-              <b> Test Mail</b> : <i> This is test</i>
-  
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              2 min
-            </div>
-          </div>
       </div>
     </div>
   </div>
   <!--/div-->
 </div>
-
+<button (click)="getMails()">Mails</button>
 <button (click)="getPosts()">Get</button>
-{{posts|json}}
+<app-mail-details [mail]="mail"></app-mail-details>
 
-mailId: {{mail.uuid}}
-body: {{mail.body}}
 
-<div [innerHTML]="mail.body"></div>
 <!--
     { "mkrId": 1, "dtCreated": "2020-05-21T16:25:23.128+0000",
      "athId": 1, "dtModified": "2020-05-21T16:25:23.128+0000", 

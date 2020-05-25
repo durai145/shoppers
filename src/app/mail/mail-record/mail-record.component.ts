@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MailInterface } from './../../mail-interface';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mail-record',
@@ -9,6 +10,7 @@ export class MailRecordComponent implements OnInit {
 
   constructor() { }
 
+  @Input() mail: MailInterface;
   ngOnInit() {
   }
 
