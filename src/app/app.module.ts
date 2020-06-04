@@ -40,6 +40,12 @@ import { ProductFullViewComponent } from './product-full-view/product-full-view.
 import { RatingComponent } from './element/rating/rating.component';
 import { MapBasicComponent } from './element/map-basic/map-basic.component';
 import { AgmCoreModule } from '@agm/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
+import { CdkTableBasicExampleComponent } from './cdk/cdk-table-basic-example/cdk-table-basic-example.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +80,10 @@ import { AgmCoreModule } from '@agm/core';
     ProductStandardViewComponent,
     ProductFullViewComponent,
     RatingComponent,
-    MapBasicComponent
+
+    MapBasicComponent,
+
+    CdkTableBasicExampleComponent
   ],
   imports: [
     HttpClientModule,
@@ -86,7 +95,11 @@ import { AgmCoreModule } from '@agm/core';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAEvhYgeKLzYv7186JkGQSlOURaRkUzKZE',
       libraries: ['places']
-    })
+    }),
+    MatSliderModule,
+    MatTableModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
