@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-list',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class MenuListComponent implements OnInit {
 
   constructor() { }
-
+  @Input() menu: any;
   ngOnInit() {
   }
-
+  menuChanged(product) {
+    if (this.menu.num === 0) {
+     // this.productRemoved.emit(this.product)
+    }
+ }
 }

@@ -1,1 +1,5 @@
-<p>menu-list works!</p>
+<div>manu list</div>
+<div *ngIf="menu">
+    <div>{{menu.name}}</div>
+    <input type="number" [(ngModel)]="menu.num" min="0" (ngModelChange)="menuChanged($event)"/>
+</div>

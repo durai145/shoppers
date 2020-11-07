@@ -21,4 +21,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  addLink(link: Link) {
+    this.listA.push(new Link('Travel6', '6'));
+    this.menuItemsJson = UtilsServiceService.jsonStringify(this.listA);
+  }
+
 }
