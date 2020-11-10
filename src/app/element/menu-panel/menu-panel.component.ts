@@ -15,6 +15,7 @@ export class MenuPanelComponent extends ElementComponent implements OnInit, Afte
   @Input() inputJson: string;
   @Input() brandName: string;
   @Output() addedLink = new EventEmitter();
+  @Input() listA: Array<Link>;
   menuItems: Array<Link>;
   constructor(private cdr: ChangeDetectorRef) {
     super();

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu-list',
@@ -9,6 +10,7 @@ export class MenuListComponent implements OnInit {
 
   constructor() { }
   @Input() menu: any;
+  @Output() addedLink = new EventEmitter();
   ngOnInit() {
   }
   menuChanged(product) {
@@ -16,4 +18,9 @@ export class MenuListComponent implements OnInit {
      // this.productRemoved.emit(this.product)
     }
  }
+
+ addMenu(menu) {
+  this.addedLink.emit(menu);
+ }
+
 }

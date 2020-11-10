@@ -2,4 +2,6 @@
 <div *ngIf="menu">
     <div>{{menu.name}}</div>
     <input type="number" [(ngModel)]="menu.num" min="0" (ngModelChange)="menuChanged($event)"/>
+    <button (click)="addMenu(menu)">+</button>
+
 </div>
