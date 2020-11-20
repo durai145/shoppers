@@ -1,3 +1,4 @@
+import { ProductDetails } from './../../../product-details';
 import { Component, OnInit, Input } from '@angular/core';
 import { MosaicComponent } from '../mosaic.component';
 
@@ -10,9 +11,9 @@ export class MoasicLargeComponent extends MosaicComponent implements OnInit {
 
   @Input() title: string;
   @Input() subTitle: string;
-  @Input() imageId1: string;
-  @Input() imageId2: string;
-  @Input() imageId3: string;
+  @Input() product1: ProductDetails;
+  @Input() product2: ProductDetails;
+  @Input() product3: ProductDetails;
   constructor() {
      super();
    }

@@ -1,5 +1,6 @@
+import { ProductDetails } from './../product-details';
 import { ElementComponent } from './../element/element.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -9,6 +10,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModelComponent  extends ElementComponent implements OnInit {
 
+  @Output() addedProduct = new EventEmitter();
+  @Input() cartList: Array<ProductDetails>;
   closeResult: string;
   ngOnInit() {
   }

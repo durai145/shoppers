@@ -1,5 +1,6 @@
+import { ProductDetails } from './../../product-details';
 import { ElementComponent } from './../element.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-tiles',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductTilesComponent extends ElementComponent implements OnInit {
 
+  @Input()  productList: Array<ProductDetails>;
   constructor() {
     super();
    }

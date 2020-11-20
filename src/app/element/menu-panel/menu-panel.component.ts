@@ -15,6 +15,8 @@ export class MenuPanelComponent extends ElementComponent implements OnInit, Afte
   @Input() inputJson: string;
   @Input() brandName: string;
   @Output() addedLink = new EventEmitter();
+  @Output() addedProduct = new EventEmitter();
+  @Input() cartList;
   @Input() listA: Array<Link>;
   menuItems: Array<Link>;
   constructor(private cdr: ChangeDetectorRef) {
@@ -31,5 +33,7 @@ export class MenuPanelComponent extends ElementComponent implements OnInit, Afte
   addLink(link) {
     this.addedLink.emit(link);
   }
-
+  addProduct(product) {
+    this.addedProduct.emit(product);
+  }
 }

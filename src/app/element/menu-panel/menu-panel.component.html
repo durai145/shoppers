@@ -15,9 +15,7 @@
         <app-search-box></app-search-box>
     </div>
     <div>
-      <app-model></app-model>
+      <app-model addedProduct="addedProduct($event)" [cartList]="cartList"></app-model>
     </div>
 
 </nav> 
-<app-menu-list *ngFor="let menu of menuItems" [menu]="menu" (addedLink)="addLink($event)" ></app-menu-list>
-<app-menu-list *ngFor="let a of listA" [menu] ="a" (addedLink)="addLink($event)"></app-menu-list>
