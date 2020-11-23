@@ -1,20 +1,6 @@
 <div class="row">
-        <div class="col-sm-2" style="background-color:yellow;">
-            <app-product-tile imageId="../../../assets/img/tomato_red.png"></app-product-tile>
+        <div class="col-sm-2" *ngFor="let product of productList" style="background-color:yellow;">
+            <app-product-tile   [product]=product></app-product-tile>
         </div>
-        <div class="col-sm-2" style="background-color:orange;">
-                <app-product-tile imageId="../../../assets/img/broccoli-hd-png-isolated-broccoli-vegetables-healthy-food-green-795.png"></app-product-tile>
-        </div>
-        <div class="col-sm-2" style="background-color:yellow;">
-                <app-product-tile imageId="../../../assets/img/tomato_green.png"></app-product-tile>
-        </div>
-        <div class="col-sm-2" style="background-color:orange;"> 
-            <app-product-tile imageId="../../../assets/img/spinach.jpg"></app-product-tile>
-        </div>
-        <div class="col-sm-2" style="background-color:yellow;">
-                <app-product-tile imageId="../../../assets/img/cauliflower.jpg"></app-product-tile>
-        </div>
-        <div class="col-sm-2" style="background-color:orange;">50%</div>
-   
-      </div>
+
 <br>

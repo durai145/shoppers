@@ -1,6 +1,6 @@
 import { ElementComponent } from './../element/element.component';
 import { ProductDetails } from './../product-details';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-standard-view',
@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductStandardViewComponent extends ElementComponent implements OnInit {
   @Input() item: ProductDetails;
+  @Output() addedProduct = new EventEmitter();
   constructor() {
     super();
    }
@@ -16,4 +17,7 @@ export class ProductStandardViewComponent extends ElementComponent implements On
   ngOnInit() {
   }
 
+  addToCart(product) {
+    this.addedProduct.emit(product);
+  }
 }

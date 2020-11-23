@@ -1,4 +1,4 @@
-<app-product-tile imageId="{{item.imageId}}">
+<app-product-tile [product]="item">
         
 </app-product-tile>
 
@@ -25,7 +25,7 @@
     </div>
     <div class="col-12 moasic-padding"> 
       
-        <button class="btn moasic-button" >Add to cart
+        <button class="btn moasic-button" (click)=addToCart(item) >Add to cart
             <fa-icon [icon]="faCartPlus"></fa-icon>
         </button>
    

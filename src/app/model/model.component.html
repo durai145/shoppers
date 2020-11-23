@@ -18,6 +18,8 @@
           <div class="input-group-append">
             <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
           </div>
+          <!--imageId="porduct.imageId"-->
+          <app-product-tile *ngFor="let product of cartList"  [product]="product" imageId="../../../assets/img/tomato_red.png" ></app-product-tile>
         </div>
       </div>
     </form>
@@ -28,4 +30,4 @@
   </div>
 </ng-template>
 <fa-icon [icon]="faShoppingCart" (click)="open(content)"></fa-icon>
-<span class="badge badge-light">9</span>
+<span class="badge badge-light">{{cartList.length}}</span>

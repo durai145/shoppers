@@ -4,7 +4,7 @@
 
  
 
-<app-menu-panel  B="B1" F="F3" C="C1" brandName="INDIAN SPICES"   inputJson={{menuItemsJson}} ></app-menu-panel>
+<app-menu-panel  B="B1" F="F3" C="C1" brandName="INDIAN SPICES" (addedProduct)="addProduct($event)"   (addedLink)="addLink($event)" [listA]=listA inputJson={{menuItemsJson}} [cartList]=cartList></app-menu-panel>
 <br>
 <br>
 <br>
@@ -20,8 +20,8 @@
   Delivery ZIP Code: 20152 Change
  
   <app-slide-show></app-slide-show>
-  <app-mosaic B="B1" F="F3" C="C1" link1="test1" link2="test2"></app-mosaic>
-  <app-product-tiles B="B1" F="F3" C="C1" ></app-product-tiles>
-  <app-list-view></app-list-view>
+  <app-mosaic B="B1" F="F3" C="C1" link1="test1" link2="test2"   [product1]="product1" [product2]="product2" [product3]="product3" [product4]="product4"> </app-mosaic>
+  <app-product-tiles B="B1" F="F3" C="C1"  [productList]=productList></app-product-tiles>
+  <app-list-view (addedProduct)=addProduct($event)></app-list-view>
 
   <app-map-basic></app-map-basic>

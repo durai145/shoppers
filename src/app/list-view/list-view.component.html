@@ -1,7 +1,7 @@
 <div class="container moasic-padding box">
   <div class="row moasic-padding">
     <div class="col-sm-3 border" *ngFor="let item of products">
-        <app-product-standard-view [item]="item"></app-product-standard-view>
+        <app-product-standard-view [item]="item" (addedProduct)="addToCart($event)"></app-product-standard-view>
     </div>
   </div>
 </div>

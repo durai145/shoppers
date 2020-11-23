@@ -1,13 +1,12 @@
 <div class="row {{getClassName()}} moasic-padding">
   <div class="col-sm-9 margin moasic-padding">
     <app-moasic-large B="B1" F="F3" C="C1" title="Free Shipping on Every Deal, Every Day."
-      imageId1="../../../assets/img/tomato_green.png" imageId2="../../../assets/img/tomato_red.png"
-      imageId3="../../../assets/img/tomato_green.png" subTitle="Plus, guaranteed  best price" link1="Shop Deals"
+      [product1]="product1" [product2]="product2" [product3]="product3" subTitle="Plus, guaranteed  best price" link1="Shop Deals"
       link2="test2"></app-moasic-large>
   </div>
   <div class="col-sm-3 margin moasic-padding">
     <app-moasic-small B="B1" F="F3" C="C1" title="Hot of the day"
-      imageId1="../../../assets/img/tomato_green.png" subTitle="" link1="Show">
+    [product]="product4" subTitle="" link1="Show">
     </app-moasic-small>
   </div>
 </div>
