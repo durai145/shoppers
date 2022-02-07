@@ -40,6 +40,11 @@ import { ProductFullViewComponent } from './product-full-view/product-full-view.
 import { RatingComponent } from './element/rating/rating.component';
 import { MapBasicComponent } from './element/map-basic/map-basic.component';
 import { AgmCoreModule } from '@agm/core';
+import { GroceryComponent } from './grocery/grocery.component';
+import { OpticalComponent } from './optical/optical.component';
+import { PhotoComponent } from './photo/photo.component';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +79,11 @@ import { AgmCoreModule } from '@agm/core';
     ProductStandardViewComponent,
     ProductFullViewComponent,
     RatingComponent,
-    MapBasicComponent
+    MapBasicComponent,
+    GroceryComponent,
+    OpticalComponent,
+    PhotoComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
@@ -83,6 +92,7 @@ import { AgmCoreModule } from '@agm/core';
     FontAwesomeModule,
     NgbModule,
     FormsModule,
+    
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAEvhYgeKLzYv7186JkGQSlOURaRkUzKZE',
       libraries: ['places']
@@ -91,4 +101,5 @@ import { AgmCoreModule } from '@agm/core';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

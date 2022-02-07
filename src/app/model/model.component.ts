@@ -2,6 +2,7 @@ import { ProductDetails } from './../product-details';
 import { ElementComponent } from './../element/element.component';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import {render} from 'creditcardpayments/creditCardPayments';
 
 @Component({
   selector: 'app-model',
@@ -20,6 +21,18 @@ export class ModelComponent  extends ElementComponent implements OnInit {
 
   constructor(private modalService: NgbModal) {
     super();
+    render(
+      {
+          id: "paypalPayButton",
+          currency: "USD",
+          value: "100.0",
+        
+          onApprove: (details) => {
+            alert("transaction success");
+  
+          }
+      }
+    );
   }
 
   open(content) {
