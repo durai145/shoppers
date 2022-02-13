@@ -44,6 +44,7 @@ import { GroceryComponent } from './grocery/grocery.component';
 import { OpticalComponent } from './optical/optical.component';
 import { PhotoComponent } from './photo/photo.component';
 import { HomeComponent } from './home/home.component';
+import { CheckOutDialogComponent } from './check-out-dialog/check-out-dialog.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { HomeComponent } from './home/home.component';
     GroceryComponent,
     OpticalComponent,
     PhotoComponent,
-    HomeComponent
+    HomeComponent,
+    CheckOutDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -99,7 +101,10 @@ import { HomeComponent } from './home/home.component';
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    CheckOutDialogComponent
+  ]
 })
 export class AppModule { 
 }

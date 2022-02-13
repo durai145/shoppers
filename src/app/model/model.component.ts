@@ -2,7 +2,9 @@ import { ProductDetails } from './../product-details';
 import { ElementComponent } from './../element/element.component';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import {render} from 'creditcardpayments/creditCardPayments';
+
+import { CheckOutDialogComponent } from '../check-out-dialog/check-out-dialog.component';
+import { resolve } from 'q';
 
 @Component({
   selector: 'app-model',
@@ -21,26 +23,30 @@ export class ModelComponent  extends ElementComponent implements OnInit {
 
   constructor(private modalService: NgbModal) {
     super();
-    render(
-      {
-          id: "paypalPayButton",
-          currency: "USD",
-          value: "100.0",
-        
-          onApprove: (details) => {
-            alert("transaction success");
-  
-          }
-      }
-    );
+    
   }
 
-  open(content) {
+  openV1(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
+  }
+
+  open(content) {
+
+    this.modalService.open(CheckOutDialogComponent, {
+      beforeDismiss: () => {
+        alert("before dismiss");
+        return true;
+      }
+    });
+    // this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    //   this.closeResult = `Closed with: ${result}`;
+    // }, (reason) => {
+    //   this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    // });
   }
 
   private getDismissReason(reason: any): string {
