@@ -19,15 +19,16 @@
             <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
           </div>
           <!--imageId="porduct.imageId"-->
-          <app-product-tile *ngFor="let product of cartList"  [product]="product" imageId="../../../assets/img/tomato_red.png" ></app-product-tile>
+          <app-product-tile *ngFor="let product of cartList"  [product]="product" imageId="porduct.imageId" ></app-product-tile>
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-
+  
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    
   </div>
 </ng-template>
 <fa-icon [icon]="faShoppingCart" (click)="open(content)"></fa-icon>
-<span class="badge badge-light">{{cartList.length}}</span>
+<span class="badge badge-light">{{cartTotalCount}}</span>

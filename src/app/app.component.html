@@ -1,8 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="login_background">
 <!--app-basic-elements--><!--app-basic-elements-->
-<app-landing-page></app-landing-page>
+<!--app-landing-page></app-landing-page-->
 
-<app-upload-image></app-upload-image>
-<router-outlet></router-outlet>
+<!--app-upload-image></app-upload-image-->
+<app-menu-panel  B="B1" F="F3" C="C1" brandName="INDIAN SPICES" (addedProduct)="addProduct($event)"   (addedLink)="addLink($event)" [listA]=listA inputJson={{menuItemsJson}} [cartList]=cartList></app-menu-panel>
+
+<!--router-outlet (activate)="passFunctionToChild($event)"></router-outlet-->
+<router-outlet (activate)="subscribeToCart($event)" (deactivate)="w()"></router-outlet>
+
+
 </div>

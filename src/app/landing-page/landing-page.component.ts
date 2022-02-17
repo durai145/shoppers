@@ -1,7 +1,8 @@
 import { ProductDetails } from './../product-details';
 import { UtilsServiceService } from './../utils-service.service';
 import { Link } from './../link';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , EventEmitter} from '@angular/core';
+//import {  } from 'events';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 // Grocery Optical Pharmacy Photo Travel
 export class LandingPageComponent implements OnInit {
+  clickevent = new EventEmitter();
   listA: Array<Link> = new Array<Link>(new Link('Home', '1'),
   new Link('Grocery', '2'),
   new Link('Optical', '3'),
@@ -37,7 +39,8 @@ export class LandingPageComponent implements OnInit {
   }
 
   addProduct(product: ProductDetails) {
-    this.cartList.push(product);
+    //this.cartList.push(product);
+    this.clickevent.emit();
   }
 
 }
