@@ -27,8 +27,8 @@
   <div class="modal-footer">
   
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    <div id="paypalPayButton"> 1</div>
+    
   </div>
 </ng-template>
 <fa-icon [icon]="faShoppingCart" (click)="open(content)"></fa-icon>
-<span class="badge badge-light">{{cartList.length}}</span>
+<span class="badge badge-light">{{cartTotalCount}}</span>

@@ -10,15 +10,20 @@
        
       <form>
         <div class="form-group">
-          <label for="dateOfBirth">Date of birth</label>
+          <label for="dateOfBirth">Date of birth >{{totalCartStatus}} :  {{totalAmount}} </label>
           <div class="input-group">
             <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
               #dp="ngbDatepicker">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
             </div>
+
+            <div *ngFor="let cartProduct of productMap">
+                {{productMap}}
+                <div *ngFor="let product of cartProduct">{{product}}</div>
+            </div>
             <!--imageId="porduct.imageId"-->
-            <app-product-tile *ngFor="let product of cartList"  [product]="product" imageId="porduct.imageId" ></app-product-tile>
+            <!--app-product-tile *ngFor="let product of cartList"  [product]="product" imageId="porduct.imageId" ></app-product-tile-->
           </div>
         </div>
       </form>

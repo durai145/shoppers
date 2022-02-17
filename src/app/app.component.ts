@@ -1,9 +1,11 @@
 
 import { CardServiceService } from './card-service.service';
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Link } from './link';
 import { ProductDetails } from './product-details';
 import { UtilsServiceService } from './utils-service.service';
+import { SharedServiceService } from './shared-service.service';
+import { Subscription } from 'rxjs';
 
 
 
@@ -12,10 +14,11 @@ import { UtilsServiceService } from './utils-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent  {
 
 
 
+  count=0;
 
   listA: Array<Link> = new Array<Link>(new Link('Home', 'home'),
   new Link('Grocery', 'grocery'),
@@ -33,17 +36,20 @@ export class AppComponent {
   productList: Array<ProductDetails> = new Array(this.product1,
    this.product2, this.product3, this.product4 );
 
-
+  sss: SharedServiceService;
   title = 'shoppers';
   cardService: CardServiceService;
-  constructor(crdServiceService: CardServiceService) {
+  constructor(crdServiceService: CardServiceService, sss: SharedServiceService) {
 
     
 
     this.cardService = crdServiceService;
+    this.sss = sss;
 
   }
   getProductList() {
     return JSON.stringify(this.cardService.getShippingPrices());
   }
+
+
 }
