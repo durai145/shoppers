@@ -24,7 +24,8 @@ export class AppComponent  {
   new Link('Grocery', 'grocery'),
   new Link('Optical', 'optical'),
   new Link('Photo', 'photo'),
-  new Link('Travel', 'travel')
+  new Link('Travel', 'travel'),
+  new Link('Admin', 'admin')
   );
 
   product1: ProductDetails = new ProductDetails('HGSL0001', '../../../assets/img/tomato_red.png', ['../../../assets/img/tomato_red.png'], 10, 1, 'test1', 'test2', 'notes', '3 days');

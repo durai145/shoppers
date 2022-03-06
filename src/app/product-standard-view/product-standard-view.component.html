@@ -35,6 +35,8 @@
         <button class="btn moasic-button" (click)=addToCart(item) >Add to cart
             <fa-icon [icon]="faCartPlus"></fa-icon>
         </button>
+
+        <app-cart-button  (cartButton)="addToCart($event)"  [item]="item"></app-cart-button>
    
   </div>
   </div>
