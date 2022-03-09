@@ -48,6 +48,7 @@ import { CheckOutDialogComponent } from './check-out-dialog/check-out-dialog.com
 import { FooterLinkComponent } from './element/footer-link/footer-link.component';
 import { CartButtonComponent } from './cart-button/cart-button.component';
 import { PersonCircleComponent } from './person-circle/person-circle.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { PersonCircleComponent } from './person-circle/person-circle.component';
     CheckOutDialogComponent,
     FooterLinkComponent,
     CartButtonComponent,
-    PersonCircleComponent
+    PersonCircleComponent,
+    AdminComponent
   ],
   imports: [
     HttpClientModule,

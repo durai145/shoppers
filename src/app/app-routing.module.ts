@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Link } from './link';
 import { GroceryComponent } from './grocery/grocery.component';
 import { OpticalComponent } from './optical/optical.component';
 import { PhotoComponent } from './photo/photo.component';
 import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -19,6 +20,9 @@ const routes: Routes = [
   }, {
     path: 'photo',
     component: PhotoComponent
+  }, {
+   path: 'admin',
+   component: AdminComponent
   }
 ];
 /*const listA: Array<Link> = new Array<Link>(new Link('Home', '1'),
